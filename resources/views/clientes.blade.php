@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Clientes') }}
         </h2>
-        <a href="#" class="btn btn-primary registrar">Registrar cliente</a>
+        <a href="{{ route('clientes.registrar') }}" class="btn btn-primary registrar">Registrar cliente</a>
     </x-slot>
 
     <div class="py-12">
@@ -26,7 +26,7 @@
                         <th>{{ $cliente->phone }}</th>
                         <th>{{ $cliente->addressLine1 }}</th>
                         <td>
-                            <a href="#" class="btn btn-success">Editar</a>
+                            <a href="/clientes/actualizar/{{ $cliente->customerNumber }}" class="btn btn-success">Editar</a>
                             <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>

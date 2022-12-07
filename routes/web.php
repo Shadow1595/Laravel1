@@ -36,3 +36,8 @@ require __DIR__.'/auth.php';
 Route::get('/clientes/registrar', [CustomerController::class, 'registrar'])->middleware(['auth', 'verified'])->name('clientes.registrar');
 
 Route::post('/clientes/guardar', [CustomerController::class, 'guardar'])->middleware(['auth', 'verified'])->name('clientes.guardar');
+
+
+Route::get('/clientes/actualizar/{id}', [CustomerController::class, 'actualizar'])->middleware(['auth', 'verified'])->name('clientes.actualizar');
+
+Route::post('/clientes/editar/{id}', [CustomerController::class, 'editar'])->middleware(['auth', 'verified'])->name('clientes.editar');
